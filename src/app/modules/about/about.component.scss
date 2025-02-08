@@ -1,0 +1,55 @@
+.content{
+    width: 997px;
+    margin: 0 auto;
+    color: aliceblue;
+    
+    & h2 {
+        font-size: 36px;
+    }
+
+    & p {
+        font-size: large;
+    }
+
+    .university{
+        color: rgb(114, 156, 255);
+    }
+
+    .fullstack{
+        color: aqua;
+    }
+
+    .angular{
+        color: rgb(255, 112, 112);
+    }
+
+    .java{
+        color: orange;
+    }
+
+    .hobby{
+        color: rgb(46, 212, 132);
+    }
+
+    @media screen and (max-width:998px) {
+        width: 768px;
+    }
+
+    @media screen and (max-width:768px) {
+        width: 600px;
+        & h2 {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        width: 80%;
+
+        & h2 {
+            text-align: center;
+        }
+    }
+}
+
+
+

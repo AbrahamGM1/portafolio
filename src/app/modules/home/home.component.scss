@@ -1,0 +1,186 @@
+
+.content{
+    display: grid;
+    width: 997px;
+    font-size: 24px;
+    grid-template-columns: 345px 652px;
+    grid-template-areas: "imagen texto";
+    align-items: center;
+    justify-content: center;
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 0 auto; /* Centra el grid horizontalmente */
+    
+    .image{
+        margin-right: 1rem;
+        grid-area: imagen;
+
+        & img {
+            width: 19rem;
+            height: 19rem;
+            border-radius: 16px;
+            box-shadow: 16px 16px rgb(59, 0, 130,0.8),
+            32px 32px rgb(0, 0, 0,0.5);
+         }
+
+    }
+
+    .text{
+        color: aliceblue;
+        text-wrap: wrap;
+        grid-area: texto;
+
+        & h2{
+            margin: 0;
+        }
+
+        .info{
+            background-color:rgb(59, 0, 130,0.8);
+            border-radius: 8px;
+            font-size: 26px;
+            box-shadow: 16px 16px rgb(0, 0, 0,0.6);
+            & p{
+                padding: 0.4rem;
+            }
+            & span {
+                color: orange;
+            }
+        }
+    
+
+    }
+
+
+
+        & a {
+
+            & i {
+                margin-right: 0.2rem;
+            }
+
+            background-color: aqua;
+            padding: 8px;
+            border-radius: 12px;
+            font-size: large;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            color: #0a3f3b;
+            transition: .3s;
+            margin-right: 1rem;
+        }
+    
+        & a:hover{
+            background-color: rgb(111, 255, 255);
+            box-shadow: 6px 6px #0a3f3b;
+        }
+
+
+        /*
+        En este media query no se ingresa la clase content al inicio
+        porque este pedazo se encuentra dentro de la clase content :P
+        */
+
+        @media screen and (max-width:998px) {
+
+        grid-template-columns: 306px 462px;
+
+            .image{
+                display: flex;
+                height: 100%;
+                align-items: center;
+                & img{
+                    width: 16rem;
+                    height: 16rem;
+                }
+            }
+
+            .text{
+                & h2{
+                    text-align: center;
+                }
+
+                .info{
+                    font-size: 24px;
+                    max-width: 600px;
+                }
+            }
+   
+        }
+
+        @media screen and (max-width:768px) {
+        
+            grid-template-columns: 1fr;
+            grid-template-areas: "imagen "
+                                "texto";
+            justify-items: center;
+
+            .image{
+                & img{
+                    margin-top: 2rem;
+                    width: 12rem;
+                    height: 12rem;
+                }
+            }
+
+            .text{
+                & h2{
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+
+                .info{
+                    font-size: 24px;
+                    max-width: 600px;
+                }
+            }
+
+            & .buttons {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+
+
+
+        @media screen and (max-width:600px) {
+
+
+            .image{
+                & img{
+                    margin-top: 2rem;
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            .text{
+                & h2{
+                    margin-top: 2rem;
+                    text-align: center;
+                }
+
+                .info{
+                    font-size: 18px;
+                    max-width: 90%;
+                    margin: 0 auto;
+                }
+            }
+
+            & .buttons {
+                flex-direction: column;
+                max-width: 90%;
+                margin: 0 auto;
+                margin-bottom: 12px;
+
+                & a {
+                margin: 0 auto;
+                width: 90%;
+                margin-bottom: 4px;
+                text-align: center;
+                }
+            }
+        }
+
+}
+

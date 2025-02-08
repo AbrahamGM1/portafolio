@@ -1,0 +1,22 @@
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+<div class="content">
+
+    <div class="text">
+        <h2>Skills</h2>
+    </div>
+
+    <div class="skill_container">
+        <div *ngFor="let item of skills" class="skill {{item.brand}}">
+            <div class="image">
+                
+            <i class="{{item.image}}"></i>
+          
+            </div>
+            <p>
+                {{item.name}}
+            </p>
+        </div>
+    </div>
+
+</div>
